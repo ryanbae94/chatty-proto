@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import * as styles from './header.css';
+import * as styles from './styles/header.css';
 import Image from 'next/image';
 import logo from '@/assets/chatty.svg';
 import profile from '@/assets/profile.svg';
