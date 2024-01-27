@@ -3,48 +3,43 @@
 import React, { useState } from 'react';
 import * as styles from './selectSubject.css';
 import SubjectCard from './_component/SubjectCard';
-import Image from 'next/image';
-import backButton from '@/assets/back.svg';
-import Button from './_component/Button';
-import { useRouter } from 'next/navigation';
-
-export type Subject = {
-	title: string;
-	selected: boolean;
-};
-
+import Button from '../_component/Button';
+import { Subject } from '../../_types/subject';
+import Layout from '../_layout';
 export default function SelectSubject() {
 	const [subjects, setSubjects] = useState<Subject[]>([
 		{
-			title: '국어',
+			koreanTitle: '국어',
+			englishTitle: 'korean',
 			selected: false,
 		},
 		{
-			title: '수학',
+			koreanTitle: '수학',
+			englishTitle: 'math',
 			selected: false,
 		},
 		{
-			title: '영어',
+			koreanTitle: '영어',
+			englishTitle: 'english',
 			selected: false,
 		},
 		{
-			title: '한국사',
+			koreanTitle: '한국사',
+			englishTitle: 'history',
 			selected: false,
 		},
 		{
-			title: '사탐',
+			koreanTitle: '사탐',
+			englishTitle: 'social',
 			selected: false,
 		},
 		{
-			title: '과탐',
+			koreanTitle: '과탐',
+			englishTitle: 'science',
 			selected: false,
 		},
 	]);
 	const [isSelected, setIsSelected] = useState(false);
-	const navigate = useRouter();
-	const handleBackBtnClick = () => {
-		navigate.back();
-	};
 	const handleOnClick = (i: number) => {
 		const newState = subjects.map((subject, index) => {
 			if (index === i) {
@@ -56,17 +51,7 @@ export default function SelectSubject() {
 		setIsSelected(newState.some((subject) => subject.selected));
 	};
 	return (
-		<div className={styles.container}>
-			<div className={styles.headerWrapper}>
-				<div className={styles.backBtnWrapper} onClick={handleBackBtnClick}>
-					<Image src={backButton} alt='back' />
-				</div>
-				<h1 className={styles.title}>어떤 과목을 공부하고 계신가요?</h1>
-				<div className={styles.backBtnWrapper} />
-			</div>
-			<div className={styles.progressBar}>
-				<div className={styles.progress} />
-			</div>
+		<Layout title='어떤 과목을 공부하고 계신가요?'>
 			<div className={styles.cardWrapper}>
 				{subjects.map((subject, i) => (
 					<SubjectCard
@@ -76,7 +61,7 @@ export default function SelectSubject() {
 					/>
 				))}
 			</div>
-			<Button isSelected={isSelected} />
-		</div>
+			<Button isSelected={isSelected} message={'선택 했어요!'} step={1} />
+		</Layout>
 	);
 }

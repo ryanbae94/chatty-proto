@@ -3,21 +3,11 @@ import { globals } from '../globals.css';
 
 export const container = style({
 	maxWidth: 1920,
-	height: 1080,
+
 	display: 'flex',
 	flexDirection: 'column',
 	alignItems: 'center',
 	margin: 'auto',
-});
-
-export const cardWrapper = style({
-	display: 'flex',
-	width: 1200,
-	alignItems: 'flex-start',
-	alignContent: 'flex-start',
-	gap: 24,
-	flexWrap: 'wrap',
-	marginTop: 230,
 });
 
 export const progressBar = style({
@@ -26,6 +16,7 @@ export const progressBar = style({
 	borderRadius: 8,
 	background: globals.color.main_6,
 	marginTop: 46,
+	marginBottom: 230,
 });
 
 export const progress = style({

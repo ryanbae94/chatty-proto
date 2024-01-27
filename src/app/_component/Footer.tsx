@@ -1,13 +1,12 @@
 import React from 'react';
 import * as styles from './styles/footer.css';
 import Image from 'next/image';
-import logo from '@/assets/chatty.svg';
 
 export default function Footer() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.contentsWrapper}>
-				<Image src={logo} alt='logo' />
+				<Image src='images/chatty.svg' width={132} height={40} alt='logo' />
 				<div className={styles.contentsSection}>
 					<div className={styles.productWrapper}>
 						<h1>product</h1>

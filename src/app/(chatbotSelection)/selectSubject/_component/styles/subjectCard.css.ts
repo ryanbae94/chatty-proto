@@ -11,6 +11,7 @@ export const container = recipe({
 		height: 164,
 		borderRadius: 12,
 		fontSize: 28,
+		gap: 10,
 		cursor: 'pointer',
 	},
 	variants: {

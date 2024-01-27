@@ -13,6 +13,14 @@ export const globals = createGlobalTheme(':root', {
 	fontColor: {
 		main: '#111111',
 	},
+	subjectColor: {
+		korean: '#FF6969',
+		math: '#A281FF',
+		english: '#FD84FF',
+		history: '#74DDFF',
+		social: '#75FF7A',
+		science: '#3E2DA9',
+	},
 });
 
 globalStyle('html, body', {
