@@ -4,6 +4,7 @@ import { recipe } from '@vanilla-extract/recipes';
 export const card = recipe({
 	base: {
 		display: 'flex',
+		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: 588,
