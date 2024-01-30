@@ -28,9 +28,6 @@ export default function SelectionLayout({
 				<h1 className={styles.title}>{title}</h1>
 				<div className={styles.backBtnWrapper} />
 			</div>
-			{/* <div className={styles.progressBar}>
-				<div className={styles.progress} />
-			</div> */}
 			<ProgressBar progress={progress} />
 			{children}
 		</div>
