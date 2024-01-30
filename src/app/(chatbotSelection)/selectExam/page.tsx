@@ -29,7 +29,7 @@ export default function SelectExam() {
 		setIsSelected(newState.some((exam) => exam.selected));
 	};
 	return (
-		<Layout title='어떤 시험을 준비하고 계신가요?'>
+		<Layout title='어떤 시험을 준비하고 계신가요?' progress={2}>
 			<div className={styles.cardWrapper}>
 				{exams.map((exam, i) => (
 					<ExamCard exam={exam} onClick={() => handleOnClick(i)} key={i} />

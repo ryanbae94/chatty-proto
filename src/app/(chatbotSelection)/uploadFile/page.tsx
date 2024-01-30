@@ -12,7 +12,7 @@ export default function UploadFile() {
 		setIsUploaded(true);
 	};
 	return (
-		<Layout title='공부하고 있는 파일을 업로드 해주세요'>
+		<Layout title='공부하고 있는 파일을 업로드 해주세요' progress={3}>
 			<div className={styles.container({ isUploaded: isUploaded })}>
 				{isUploaded ? (
 					'업로드 완료!'

@@ -2,11 +2,12 @@
 import { useRouter } from 'next/navigation';
 import * as styles from './layout.css';
 import Image from 'next/image';
+import ProgressBar from './_component/ProgressBar';
 
 type SelectionLayoutProps = {
 	children: React.ReactNode;
 	title: string;
-	progress?: number;
+	progress: number;
 };
 
 export default function SelectionLayout({
@@ -27,9 +28,10 @@ export default function SelectionLayout({
 				<h1 className={styles.title}>{title}</h1>
 				<div className={styles.backBtnWrapper} />
 			</div>
-			<div className={styles.progressBar}>
+			{/* <div className={styles.progressBar}>
 				<div className={styles.progress} />
-			</div>
+			</div> */}
+			<ProgressBar progress={progress} />
 			{children}
 		</div>
 	);

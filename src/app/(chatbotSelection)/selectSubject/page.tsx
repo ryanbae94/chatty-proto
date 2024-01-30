@@ -51,7 +51,7 @@ export default function SelectSubject() {
 		setIsSelected(newState.some((subject) => subject.selected));
 	};
 	return (
-		<Layout title='어떤 과목을 공부하고 계신가요?'>
+		<Layout title='어떤 과목을 공부하고 계신가요?' progress={1}>
 			<div className={styles.cardWrapper}>
 				{subjects.map((subject, i) => (
 					<SubjectCard

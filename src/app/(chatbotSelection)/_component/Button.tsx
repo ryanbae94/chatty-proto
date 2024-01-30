@@ -17,6 +17,9 @@ export default function Button({ isSelected, message, step }: ButtonProps) {
 		if (step === 2) {
 			navigate.push('/uploadFile');
 		}
+		if (step === 3) {
+			navigate.push('/myPage');
+		}
 	};
 	return (
 		<button
