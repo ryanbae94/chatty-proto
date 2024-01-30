@@ -12,13 +12,13 @@ export default function Button({ isSelected, message, step }: ButtonProps) {
 	const navigate = useRouter();
 	const handleOnClick = () => {
 		if (step === 1) {
-			navigate.push('/selectExam');
+			navigate.push('/select-exam');
 		}
 		if (step === 2) {
-			navigate.push('/uploadFile');
+			navigate.push('/upload-file');
 		}
 		if (step === 3) {
-			navigate.push('/myPage');
+			navigate.push('/my-page');
 		}
 	};
 	return (
